@@ -445,6 +445,9 @@ Exemple de code :
       person: TPerson;
 
     begin
+        Greet(person);
+    end.
+
 
 ## 20. Orys (Mon langage)
 
@@ -472,5 +475,4 @@ Exemple de code :
        return c;
     }
 
-      Greet(person);
-    end.
+      
