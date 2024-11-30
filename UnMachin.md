@@ -445,7 +445,32 @@ Exemple de code :
       person: TPerson;
 
     begin
-      person.ID := 1;
-      person.Name := 'Sophie';
+
+## 20. Orys (Mon langage)
+
+Orys sera un langage compilé, performant, mais très mal foutu.
+
+Exemple de code :
+
+    import [orys::std] as std;
+    
+    fn add(x: i32, y: i16): i32 -> {
+       return x + y.cast(i32);
+    }
+    
+    asm[asm::nasm, "
+      global _start
+             call main
+    "];
+    
+    fn main(): i32 -> {
+       def a: i32 = 14;
+       def b: i16 = 47;
+    
+       def c: i32 = add(a, b.cast(i32));
+    
+       return c;
+    }
+
       Greet(person);
     end.
