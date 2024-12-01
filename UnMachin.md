@@ -478,4 +478,26 @@ Exemple de code :
     
         return c
 
-      
+## 21. Odin
+Odin est un langage de programmation moderne conçu pour le développement système. Il se concentre sur la simplicité, la performance et la lisibilité, tout en s'inspirant de Go et C. Odin est souvent utilisé pour des projets bas niveau, comme les moteurs de jeu ou les systèmes d'exploitation.
+
+Exemple de code :
+
+    package main
+
+    import "core:fmt"
+    
+    Person :: struct {
+        id: int,
+        name: string,
+    }
+    
+    greet :: proc(p: Person) {
+        fmt.printf("Bonjour, %s!\n", p.name)
+    }
+    
+    main :: proc() {
+        person: Person = Person{id=1, name="Sophie"}
+        greet(person)
+    }
+
