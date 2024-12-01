@@ -455,24 +455,27 @@ Orys sera un langage compilé, performant, mais très mal foutu.
 
 Exemple de code :
 
-    import [orys::std] as std;
+    import orys.std as std
+
+    asm[orys.asm.nasm, """
+       global _start
+       call main
+    """]
     
-    fn add(x: i32, y: i16): i32 -> {
-       return x + y.cast(i32);
-    }
+    fn add(x: i32, y: i16) -> i32:
+        return x + (y as i32)
     
-    asm[asm::nasm, "
-      global _start
-             call main
-    "];
+    fn log(value: auto) -> void:
+        std.print(value.to_string())
     
-    fn main(): i32 -> {
-       def a: i32 = 14;
-       def b: i16 = 47;
+    fn main() -> i32:
+        a: i32 = 14
+        b: i16 = 47
+        c: i32 = add(a, b as i32)
     
-       def c: i32 = add(a, b.cast(i32));
+        log("Result:")
+        log(c)
     
-       return c;
-    }
+        return c
 
       
