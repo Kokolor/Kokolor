@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @Kokolor
 - 🌱 I’m currently learning Zig and writing a programming langage
-- 📫 How to reach me: le_pigeon_sans_ailes on Discord
+- 📫 How to reach me: le_pigeon_sans_ailes_des_egouts_ on Discord
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: I love Zig and C
 
